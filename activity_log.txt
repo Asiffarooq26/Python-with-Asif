@@ -1,0 +1,20 @@
+Wed Jan  7 18:10:41 2026 - Program started
+Wed Jan  7 18:11:25 2026 - Program started
+Wed Jan  7 18:15:23 2026 - Monitoring started
+Wed Jan  7 18:15:23 2026 - Clipboard: og_event(f"Clipboard: {data}")def save_screenshot():
+filename = f"{screenshot_folder}/screenshot_{int(time.time())}.png"pyautogui.screenshot(filename)
+log_event(f"Screenshot: {filename}")def monitor():
+for i in range(3):check_clipboard()save_screenshot()
+time.sleep(10)log_event("Monitoring started")
+monitor_thread = threading.Thread(target=monitor)monitor_thread.start()
+monitor_thread.join()log_event("Monitoring finished")
+Wed Jan  7 18:15:24 2026 - Screenshot: screenshots/screenshot_1767789923.png
+Wed Jan  7 18:15:34 2026 - Clipboard: mport timeimport pyperclipimport pyautoguiimport osimport threading
+logfile = "activity_log.txt"screenshot_folder = "screenshots"if not os.path.exists(screenshot_folder):
+os.makedirs(screenshot_folder)def log_
+Wed Jan  7 18:15:34 2026 - Screenshot: screenshots/screenshot_1767789934.png
+Wed Jan  7 18:15:44 2026 - Clipboard: mport timeimport pyperclipimport pyautoguiimport osimport threading
+logfile = "activity_log.txt"screenshot_folder = "screenshots"if not os.path.exists(screenshot_folder):
+os.makedirs(screenshot_folder)def log_
+Wed Jan  7 18:15:44 2026 - Screenshot: screenshots/screenshot_1767789944.png
+Wed Jan  7 18:15:54 2026 - Monitoring finished
